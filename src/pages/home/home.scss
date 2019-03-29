@@ -1,3 +1,374 @@
 page-home {
+  ion-slides {
+    height: auto;
+    margin-top: 4rem;
+  }
+  ion-slide {
+    margin: 5px;
+    img{
+      border-radius: 15px 15px 0px 0px;
+    }
+    .cont{
+      background-color: #353A50;
+      padding: 5px;
+      margin-top: -5px;
+      border-radius: 0px 0px 15px 15px;
+      height: 7rem;
+      font-weight: 100;
+      h4{
+        margin-top: 5px;
+        font-size: 1.8rem;
+        color:#ffffff;
+        font-weight: 500;
+      }
+      p{
+        font-size: 1rem;
+        color: #ffffff;
+        margin-top: -3px;
+      }
+    }
+  }
+  .button-select{
+    text-align: center;
+    margin-top: 1rem;
+    .button-round-md ,.button-round-ios {
+      border-radius: 15px;
+  }
+    button {
+      display: inline-block;
+      width : 48%;
+      padding: 28px;
+    }
+
+    .dark {
+      margin-left:-12px;
+
+    }
+    .primary {
+      margin-right:-12px;
+    }
+  }
+
+  .card-background-page {
+    margin-top: 1rem;
+    ion-card {
+      position: relative;
+      text-align: center;
+      border-radius:15px;
+      overflow: visible;
+      border-radius:15px;
+      background: transparent;
+    }
+    ion-fab-list{
+      background-color: #353A50;
+      width: 100%;
+
+    }
+
+  img{
+    border-radius:15px;
+  }
+    .card-icons {
+      position: absolute;
+      top:0;
+      right:0;
+      width: 100%;
+      color: #fff;
+      font-size: 1.6em;
+      overflow: visible;
+      .fab {
+        position: absolute;
+        font-size: 2rem;
+        top:0;
+        right:0;
+    }
+
+    }
+    .list-food{
+      background-color: #ffffff;
+      font-size: 1rem;
+      color:#353A50;
+      margin: 5px;
+      border-radius: 10px;
+      h4{
+        font-size: 1.8em;
+        text-align: left;
+      }
+      p{
+        text-align: left;
+      }
+      .icon-markets {
+        background :rgba(255,79,154,0.25);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        padding: 3px 6px 3px 0px;
+
+      }
+      span {
+        font-size: 10px;
+      }
+      .icon-market {
+        font-size: 3em;
+        color:#FF4F9A;
+      }
+    }
+    .fab-md,.fab-ios {
+      color: #fff;
+      background-color: transparent;
+      box-shadow: none;
+    }
+    .card-title {
+      position: absolute;
+      top: 32%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 58%;
+      width: 100%;
+      color: #fff;
+    }
+
+    .cardfab{
+      width: 100%;
+      height: 200px;
+      background-color: aliceblue;
+    }
+    .panel {
+      display: none;
+      overflow: hidden;
+  }
+  }
+  
+  .addicon{
+    border: 4px solid #ffc2dc;
+    background-color: rgba(158, 158, 158, 0.1);
+    border-radius: 100%;
+    width: 115%;
+    font-size: 30px;
+    color: #eb568d;
+}
+.downicon{
+  position: absolute;
+  font-size: 2rem;
+  top: 15px;
+  right: 15px;
+  color: white;
+}
+.label-md {
+  margin: 5px;
+}
+
+.segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+  border-color: rgba(255, 255, 255, 0);
+  opacity: 1;
+  background-color: #ff5e99;
+}
+
+.segment-md .segment-button  {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 0;
+  height: 4.2rem;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 4rem;
+  text-transform: uppercase;
+  color: #fdfdfd;
+  background-color: transparent;
+  opacity: 0.7;
+  -webkit-transition: 100ms all linear;
+  transition: 100ms all linear;
+  padding: 0 22px;
+  background-color: #353A50;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.segmentt{
+  background-color: #353A50;
+  border-radius: 15px;
+  padding: 8px 0 !important;
+  margin: 0px;
+}
+
+
+.menu-inner .item-md, .item-ios {
+  background: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #525252;
+}
+.segment-ios .segment-button {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 0;
+  height: 3.2rem;
+  border-width: 1px;
+  border-style: hidden;
+  border-color: #FF5E99;
+  font-size: 1.3rem;
+  line-height: 3rem;
+  color: #FF5E99;
+  background-color: transparent;
+}
+
+
+
+
+
+// info
+
+.info-pers {
+  text-align: center;
+  color:#8592AD;
+  margin-top: 25px;
+
+  .img-info{
+    width: 60%;
+    margin: auto;
+  }
+  img{
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+  h4{
+    margin-top: 10px;
+  }
+  P{
+    margin-top: -5px;
+  }
+}
+.info-info {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+
+  .email{
+    background-color: #353A50;
+    padding: 4px 3px 8px 8px;
+    color: #ffffff;
+    font-size: 1.9rem;
+    border-radius: 5px;
+    width: 33px;
+    height: 30px;
+    float: left;
+
+    
+
+  }
+  p{
+    line-height: 0.2;
+  }
+  label {
+    font-family: inherit;
+    line-height: normal;
+    margin-left: 12px;
+    margin-top: 20px;
+    position: relative;
+    top: 6px;
+    font-size: 12px;
+
+  }
+
+
+
+  .otime{
+      h4 {
+        padding: 0px 5px;
+        color: #C2C4C9;
+    }
+    h5 , p{
+      padding: 0px 5px;
+      color: rgb(167, 169, 179);
+  }
+
+  }
+
+}
+
+h2 {
+  color: black;
+}
+
+
+  .footer {
+    border-radius: 15px 15px 0px 0px;
+
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: 10;
+      display: block;
+      width: 100%;
+    
+  }
+  .footerb{
+    background-color: #2A2E43;
+    padding: 13px;
+    border-radius: 15px 15px 0px 0px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .footerb:after {
+    background: linear-gradient(to right, #FF5E99 25%,#FE80AE 25%, #FE80AE 50%, #FEA7C7 50%, #FEA7C7 75%, #FBDAE6 75%);
+    position: absolute;
+    content: '';
+    height: 5px;
+    right: 0;
+    left: 0;
+    top: 16px;
+    border-radius: inherit;
+  }
+
+
+
+
+  .footercard {
+    border-radius: 15px 15px 0px 0px;
+
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: 10;
+      display: block;
+      width: 100%;
+    
+  }
+  .footercardb{
+    background-color: #2A2E43;
+    padding: 13px;
+    border-radius: 15px 15px 0px 0px;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 0;
+    height: 350px;
+  }
+  .footercardb:after {
+    background: linear-gradient(to right, #FF5E99 25%,#FE80AE 25%, #FE80AE 50%, #FEA7C7 50%, #FEA7C7 75%, #FBDAE6 75%);
+    position: absolute;
+    content: '';
+    height: 5px;
+    right: 0;
+    left: 0;
+    top: 16px;
+    border-radius: inherit;
+  }
+
 
 }

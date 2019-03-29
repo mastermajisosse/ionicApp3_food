@@ -1,16 +1,107 @@
-// http://ionicframework.com/docs/theming/
+.content-md, .content-ios{
+  background-color: #2A2E43;
+}
 
+.rating{
+    width: 30px;
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    font-size: 12px;
+    text-align: center;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: #FF5E99;
+}
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+.toolbar{
+    margin-bottom: 35px;
+}
+
+.list1{
+    margin-top: 20px !important;
+}
+
+.menu-inner .item-md, .item-ios {
+  background: transparent;
+  padding-left: 25px;
+  padding-right: 25px;
+  color:#fff;
+}
+
+.menu-inner{
+    border-top-right-radius: 15px !important;
+}
+
+// صورة الخلفية
+.menu-header{
+  background-image: url('../assets/imgs/all/frying.jpg');
+  background-size: cover;
+  color:#FFFFFF;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #2A2E43;
+    opacity: .8;
+
+  }
+  .image{
+    widows: 100%;
+    line-height: 1.5;
+    text-align: left;
+    padding-left: 20px;
+  }
+  .imgs{
+    margin-top:15px;
+  }
+
+  img{
+    margin: 20% 0 0 0;
+    border-radius:50%;
+    width: 65px;
+    height: 60px;
+  }
+  p{
+    font-size: 2.4rem;
+    line-height: 0;
+    font-weight: 400;
+  }
+  span{
+      color: #8592AD;
+  }
+  .toolbar-background, .toolbar-background-ios, .toolbar-background-md {
+    background-color:transparent;
+    color: #ffffff;
+  }
+}
+
+.home,.info,.clipboard{
+  font-size: 2.9rem;
+  color:#3497FD;
+  padding-right: 10px;
+
+}
+.info{
+  color:#C840E9;
+}
+
+.clipboard{
+    color: darkorange;
+}
+
+.list2{
+    position: absolute;
+    bottom: 0;
+    ion-label{
+        color: #8592AD;
+    }
+}
+
+// حدف الخط في السايد بار
+.list-md .item-block .item-inner,.list-ios .item-block .item-inner {
+  border:none;
+}

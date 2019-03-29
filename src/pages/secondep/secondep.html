@@ -1,0 +1,204 @@
+
+<ion-content class="bg" padding="true">
+
+  <ion-list>
+
+      <form novalidate (ngSubmit)="submitCheckout()" [formGroup]="groupform">
+
+        <div class="forlandscape1">
+
+          <ion-label class="titles">Liferadesse</ion-label>
+
+        <ion-item [class.error2]="( groupform.get('name').hasError('minlength') || groupform.get('name').hasError('maxlength') ||groupform.get('name').hasError('pattern') ||groupform.get('name').hasError('required') ) && groupform.get('name').touched">
+          <ion-label class="labels">Name </ion-label>
+          <ion-input type="text"  placeholder="name" [(ngModel)]="userData.Name" formControlName="name"></ion-input>
+        </ion-item>
+        <!-- [ngClass]="{'class1 class2 class3' : true}" -->
+        <ion-list no-lines *ngIf="( groupform.get('name').hasError('minlength') || groupform.get('name').hasError('maxlength') ||groupform.get('name').hasError('pattern') ||groupform.get('name').hasError('required') ) && groupform.get('name').touched">
+          <div class="error" *ngIf="groupform.get('name').hasError('required') && groupform.get('name').touched">
+              Enter a Name please
+          </div>
+          <div class="error" *ngIf="groupform.get('name').hasError('minlength') && groupform.get('name').touched">
+            Minimum 4 characters
+          </div>
+          <div class="error" *ngIf="groupform.get('name').hasError('maxlength') && groupform.get('name').touched">
+            Maximum 30 characters
+          </div>
+          
+          <!-- فقط الحروف انجليزي ادا اردت عربي بالعادة يتم وضعها لكي لا يدخلو ارقام مكان الاسماء -->
+
+          <!-- <div class="error" *ngIf="groupform.get('name').hasError('pattern') && groupform.get('name').touched">
+              Juste alphabet caractère
+          </div> -->
+        </ion-list>
+
+
+        <ion-item [class.error2]="( groupform.get('firma').hasError('minlength') || groupform.get('firma').hasError('maxlength') ||groupform.get('firma').hasError('pattern') ||groupform.get('firma').hasError('required') ) && groupform.get('firma').touched">
+          <ion-label class="labels">Firma</ion-label>
+          <ion-input type="text" placeholder="Firmaname (optimal)" [(ngModel)]="userData.lastname" formControlName="firma"></ion-input>
+        </ion-item>
+    
+          <ion-list no-lines *ngIf="( groupform.get('firma').hasError('minlength') || groupform.get('firma').hasError('maxlength') ||groupform.get('firma').hasError('pattern') ||groupform.get('firma').hasError('required') ) && groupform.get('firma').touched">
+            <div *ngIf="groupform.get('firma').hasError('required') && groupform.get('firma').touched">
+                Enter firma please
+            </div>
+            <div *ngIf="groupform.get('firma').hasError('minlength') && groupform.get('firma').touched">
+              Minimum 4 characters
+            </div>
+            <div *ngIf="groupform.get('firma').hasError('maxlength') && groupform.get('firma').touched">
+              Maximum 10 characters
+            </div>
+          </ion-list>
+
+          
+        <ion-item [class.error2]="( groupform.get('strasse').hasError('minlength') || groupform.get('strasse').hasError('maxlength') ||groupform.get('strasse').hasError('required') ) && groupform.get('strasse').touched">
+          <ion-label class="labels">strasse</ion-label>
+          <ion-input type="text" placeholder="strasse" [(ngModel)]="userData.strasse" formControlName="strasse"></ion-input>
+        </ion-item>
+    
+          <ion-list no-lines *ngIf="( groupform.get('strasse').hasError('minlength') || groupform.get('strasse').hasError('maxlength') ||groupform.get('strasse').hasError('required') ) && groupform.get('strasse').touched">
+            <div *ngIf="groupform.get('strasse').hasError('required') && groupform.get('strasse').touched">
+                Enter strasse please
+            </div>
+            <div *ngIf="groupform.get('strasse').hasError('minlength') && groupform.get('strasse').touched">
+              Minimum 4 characters
+            </div>
+            <div *ngIf="groupform.get('strasse').hasError('maxlength') && groupform.get('strasse').touched">
+              Maximum 15 characters
+            </div>
+          </ion-list>
+  
+
+        <ion-item class="twoInRow1" [class.error2]="( groupform.get('plz').hasError('minlength') || groupform.get('plz').hasError('maxlength') ||groupform.get('plz').hasError('pattern') ||groupform.get('firma').hasError('required') ) && groupform.get('firma').touched">
+          <ion-label class="labels">Plz</ion-label>
+          <ion-input type="text" placeholder="41460" [(ngModel)]="userData.plz" formControlName="plz"></ion-input>
+        </ion-item>
+  
+
+        <ion-item class="twoInRow2" [class.error2]="( groupform.get('stadt').hasError('minlength') || groupform.get('stadt').hasError('maxlength') ||groupform.get('stadt').hasError('required') ) && groupform.get('stadt').touched">
+          <ion-label class="labels">stadt</ion-label>
+          <ion-input type="text" placeholder="stadt" [(ngModel)]="userData.stadt" formControlName="stadt"></ion-input>
+        </ion-item>
+  
+
+        <ion-item class="area" [class.error2]="( groupform.get('anmerkung').hasError('minlength') || groupform.get('anmerkung').hasError('maxlength') ||groupform.get('anmerkung').hasError('required') ) && groupform.get('anmerkung').touched">
+          <ion-label class="labels">anmerkung</ion-label>
+          <ion-textarea type="text" placeholder="anmerkung" [(ngModel)]="userData.anmerkung" formControlName="anmerkung"></ion-textarea>
+        </ion-item>
+
+
+
+        <ion-label class="titles">BESTELLEN & BESTELLEN </ion-label>
+       
+        <!-- Email and phone section start -->
+
+        <ion-item [class.error2]="( groupform.get('email').hasError('minlength') || groupform.get('email').hasError('pattern') ||groupform.get('email').hasError('required') ) && groupform.get('email').touched">
+          <ion-label class="labels">Email</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.email" formControlName="email" [class.error1]="!groupform.controls.email.valid && groupform.controls.email.dirty"></ion-input>
+        </ion-item>
+        <ion-list no-lines *ngIf="( groupform.get('email').hasError('minlength') || groupform.get('email').hasError('pattern') ||groupform.get('email').hasError('required') ) && groupform.get('email').touched">
+          <div class="error" *ngIf="groupform.get('email').hasError('required') && groupform.get('email').touched">
+              Enter the Email
+          </div>
+          <div class="error" *ngIf="groupform.get('email').hasError('pattern') && groupform.get('email').touched">
+            invalid Email
+          </div>
+        </ion-list>
+
+        <ion-item [class.error2]="(groupform.get('phone').hasError('required')) && groupform.get('phone').touched">
+          <ion-label class="labels">Phone number</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.phone" formControlName="phone"></ion-input>
+        </ion-item>
+
+      </div>
+    
+        <!-- Email and phone end -->
+
+
+        <div class="forlandscape2">
+        <ion-label class="titles">BESTELLEN & BESTELLEN </ion-label>
+
+        <!-- order lists start -->
+
+        <ion-list class="order" padding>
+          <h3>1X Cheeseburger</h3>
+          <h3 class="cost">8.90 $</h3>
+          <button class="add" icon-only small> <ion-icon name="ios-add-circle-outline"></ion-icon> </button>
+          <button class="remove" icon-only small> <ion-icon name="ios-remove-circle-outline"></ion-icon> </button>
+          <h6> + Sasam burn </h6>
+        </ion-list>
+
+        <ion-list class="order" padding>
+          <h3>1X Cheeseburger</h3>
+          <h3 class="cost">8.90 $</h3>
+          <button class="add" icon-only small> <ion-icon name="ios-add-circle-outline"></ion-icon> </button>
+          <button class="remove" icon-only small> <ion-icon name="ios-remove-circle-outline"></ion-icon> </button>
+          <h6> + Tagliatelle </h6>
+          <h6> + Mozzeralla </h6>
+          <h6> + Goudakass </h6>
+        </ion-list>
+
+        <ion-list class="order orderonly" padding>
+          <h3>Zwichensumme</h3>
+          <h3 class="cost">21.60 $</h3>
+        </ion-list>
+
+        <ion-list class="order orderonly" padding>
+          <h3>Liferburge</h3>
+          <h3 class="cost">21.60 $</h3>
+        </ion-list>
+
+        <ion-list class="order orderonly" padding>
+          <h3 style="color: #FF5E99">Rabatt</h3>
+          <h3 style="color: #FF5E99" class="cost">0,00 $</h3>
+        </ion-list>
+
+        <ion-list class="order Gesa" padding>
+          <h3 >Gesamtsumme <span style="color: #8592AD">(ink.url.):</span></h3> 
+          <h3 class="cost">21.60 $</h3>
+        </ion-list>
+        
+
+        <!-- order lists end -->
+      </div>
+
+        
+        
+        <p class="titles">mit dem absenden deiner Bestellung stimmst du unseren 
+          <span >ABG</span> and <span >Datenschutzbestimmung</span> zu. </p>
+
+
+        <button ion-button block type="submit" class="but" [disabled]="groupform.invalid">BESTELLEN</button>
+
+
+      </form>
+    </ion-list>
+
+    <!-- pop up  [hidden]="overlayHidden"-->
+    <div class="my-overlay" padding *ngIf="overlayHidden">
+      <div full class="ioverlay" >
+        <h1>Confirm?</h1>
+        <p> Before we start, remember that you can never cross the ocean until you have the courage 
+          to lose sight of the shore. </p> 
+          <button class="overleCheckButton" (click)="footer()" icon-only large> <ion-icon name="ios-checkmark-circle"></ion-icon> </button>
+          <button class="overleCloseButton" (click)="hideOverlay()" icon-only large> <ion-icon name="ios-close-circle"></ion-icon> </button>
+      </div>
+    </div>
+			
+    <!-- end pop up -->
+
+    <!-- footer -->
+    <div class="my-overlay" padding (click)="hideOverlay()" *ngIf="footerHidden">
+      </div>
+      <div full class="ifooter" ion-fixed *ngIf="footerHidden">
+          <h1 >Liferbestatigst</h1>
+            <button class="footerbut" ion-button large> <ion-icon name="ios-call-outline"></ion-icon> </button>
+            <h3>+49 157 811 844 58</h3>
+            <div><h5> Bestellung  </h5> <br> <h4>Grmbs</h4></div>
+            <img src="https://www.uwgb.edu/UWGBCMS/media/Maps/images/map-icon.jpg">
+        </div>
+
+    <!-- end footer -->
+
+    
+  </ion-content>  

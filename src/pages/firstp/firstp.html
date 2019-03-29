@@ -1,0 +1,424 @@
+
+<ion-header>
+
+    <ion-toolbar>
+
+        <button  ion-button menuToggle left>
+            <img src="assets/imgs/manu.png" width="26"/>
+        </button>
+          <div *ngIf="!issearchbaropened" class="line"></div>
+
+      <ion-title *ngIf="!issearchbaropened">
+        <span >{{user_data.address}}</span>  
+        <ion-icon name="ios-arrow-forward"></ion-icon> 
+      </ion-title>
+
+      <ion-searchbar [(ngModel)]="searchVar" (change)="openSearch($event)" autocorrect="off" 
+      *ngIf="issearchbaropened" showCancelButton="true" (ionCancel)="issearchbaropened=false" ></ion-searchbar>  
+
+      <ion-buttons end>
+        <button *ngIf="!issearchbaropened" (click)="issearchbaropened=true" style="font-size: 22px;" ion-button>
+        <ion-icon class="search" name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content (click)="issearchbaropened=false" class="bg" padding>
+
+  <!-- cards -->
+    <!-- <ion-slides [slidesPerView]="3" [class.blur]="showoverlay">
+
+        <ion-slide *ngFor="let foo of Food_data;let i = index" (click)="showselectedfood['accord'+i]=!showselectedfood['accord'+i]" >
+          <img src="assets/imgs/food/salate.png" [class.hei]="showselectedfood['accord'+i]">
+          <div class="cont" [class.active]="showselectedfood['accord'+i]">
+            <h4>{{foo.name}}</h4>
+            <p>{{foo.details}} </p>
+          </div>
+        </ion-slide>
+
+        
+        </ion-slides> -->
+      
+        <ion-slides [slidesPerView]="3">
+          <ion-slide>
+            <img src="assets/imgs/food/pizza.png" alt="">
+            <div class="cont">
+              <h4>Pizza</h4>
+              <p>mit Tomatensauce und Goudakäse</p>
+            </div>
+          </ion-slide>
+      
+          <ion-slide>
+            <img src="assets/imgs/food/salate.png" alt="">
+            <div class="cont">
+              <h4>Salate</h4>
+              <p>mit Dressing nach Wahl</p>
+            </div>
+          </ion-slide>
+      
+          <ion-slide>
+            <img src="assets/imgs/food/pasta.png" alt="">
+            <div class="cont">
+              <h4>Pasta</h4>
+              <p>mit Nudelsorte nach Wahl</p>
+            </div>
+          </ion-slide>
+      
+          <ion-slide>
+            <img src="assets/imgs/food/place.png" alt="">
+            <div class="cont">
+              <h4>Palace</h4>
+              <p>2mi, 4 stars</p>
+            </div>
+          </ion-slide>
+        </ion-slides>
+      
+      
+        <!-- end cards -->
+
+   
+<div class="card-background-page" [class.blur]="showoverlay">
+
+  <div class="segmentt" >
+    <!-- هده ال انجيمودل لكي تكون السيغمنت ظاهرة عند تشغيل الأبليكيشن -->
+      <ion-segment mode="md" [(ngModel)]="showsegment">
+        <ion-segment-button class="foodbut" value="food">
+          Food
+        </ion-segment-button>
+        <ion-segment-button class="infobut" value="info">
+          Info
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+
+    
+    <div [ngSwitch]="showsegment">
+
+    <!-- food -->
+
+      <!-- <ion-list *ngSwitchCase="'food'">
+
+          <div *ngFor="let foo of Food_data;let i = index">
+            <div>
+              <ion-card (click)="showselectedfood['accord'+i]=!showselectedfood['accord'+i]">
+                <ion-icon name="ios-arrow-down" *ngIf="!showselectedfood['accord'+i]" class="downicon"></ion-icon>
+                <ion-icon name="ios-arrow-up" *ngIf="showselectedfood['accord'+i]" class="downicon"></ion-icon>
+
+                <img src="assets/imgs/food/pizza-cont.png"/>
+
+                <div class="card-title">{{foo.name}}</div>
+                <div class="card-subtitle">{{foo.adder}} Listings</div>
+              </ion-card>
+              </div>
+          <div *ngFor="let fwo of FoodOption_data;let n = index" >
+                <div *ngIf="showselectedfood['accord'+i]&&fwo.groupID==foo.id">
+                <ion-card class="foodop">
+                  <h1>{{fwo.name}}</h1>
+                  <button class="foodbut" (click)="showoverlay=!showoverlay">+</button>
+                  <h2>{{fwo.price}}$</h2>
+                  <p>{{fwo.details}}</p>
+                </ion-card>
+                </div>
+              </div>
+          </div>
+        </ion-list> -->
+
+        <ion-list *ngSwitchCase="'food'">
+
+          <div>
+              <div class="accordion">
+                  <ion-card>
+                      <ion-icon name="ios-arrow-down" class="downicon" ></ion-icon>
+    
+                      <img src="assets/imgs/food/pizza-cont.png"/>
+    
+                      <div class="card-title">Pizza</div>
+                      <div class="card-subtitle">3 Listings</div>
+                  </ion-card>
+                </div>
+                <div class="panel">
+                    <!-- Menu Item -->
+                    <ion-list class="list-food" no-lines>
+                        <ion-item item-start>
+                            <h2>Beef Burger</h2>
+                            <p>Beef, cheese, potato, onion, fries</p>
+    
+                            <h1 item-end> 9.00$</h1>
+                            <button item-end style="background-color: initial;">
+                                                    
+                                <ion-icon name="md-add-circle" class="addicon"></ion-icon>
+                            </button>
+                            
+                        </ion-item>                   
+                      </ion-list>
+                </div>
+          </div>
+          <div>
+              <div class="accordion">
+                  <ion-card>
+                      <ion-icon name="ios-arrow-down" class="downicon"></ion-icon>
+    
+                      <img src="assets/imgs/food/salate-cont.png"/>
+    
+                      <div class="card-title">Salate</div>
+                      <div class="card-subtitle">3 Listings</div>
+                  </ion-card>
+                </div>
+                <div class="panel">
+                    <!-- Menu Item -->
+                    <ion-list class="list-food" no-lines>
+                        <ion-item item-start>
+                            <h2>Beef Burger</h2>
+                            <p>Beef, cheese, potato, onion, fries</p>
+    
+                            <h1 item-end> 9.00$</h1>
+                            <button item-end style="background-color: initial;">
+                                                    
+                                <ion-icon name="md-add-circle" class="addicon"></ion-icon>
+                            </button>
+                            
+                        </ion-item>                   
+                      </ion-list>
+                </div>
+          </div>
+    
+      </ion-list>
+
+
+      <!-- info sec beg -->
+      <ion-list *ngSwitchCase="'info'">
+
+          <div class="info-pers">
+              <div class="img-info">
+                <img src="assets/imgs/all/imag-info.png" alt="">
+              </div>
+              <div class="content-info">
+                <h4>{{user_data.username}}</h4>
+                <p>{{user_data.address}}</p>
+              </div>
+            </div>
+  
+          <ion-grid>
+  
+            <ion-row class="info-info">
+              <ion-col col-6>
+                <div class="email">
+                    <ion-icon name="ios-call-outline"></ion-icon>
+                </div>
+                <label> telephone</label>
+              </ion-col>
+              <ion-col col-6>
+                  <div class="email">
+                      <ion-icon name="ios-mail"></ion-icon>
+                  </div>
+                  <label>{{user_data.info}}</label>
+                </ion-col>
+            </ion-row>
+  
+          </ion-grid>
+  
+        <div class="otime">
+          <div class="otime1">
+          <h4>Öffnungszeiten</h4>
+          <h5>Montag :<span class="whiite"> {{user_data.open}} - {{user_data.close}} </span> </h5>
+          <h5>Montag :<span class="whiite"> {{user_data.open}} - {{user_data.close}} </span> </h5>
+          <h5>Montag :<span class="whiite"> {{user_data.open}} - {{user_data.close}} </span> </h5>
+          <h5>Montag :<span class="whiite"> {{user_data.open}} - {{user_data.close}} </span> </h5>
+          <h5>Montag :<span class="whiite"> {{user_data.open}} - {{user_data.close}} </span> </h5>
+          <h5>Montag :<span class="whiite"> close </span> </h5>
+          <h5>Montag :<span class="whiite"> close </span> </h5></div>
+          <p>Infos zu Inhaltsstoffen, Allergenen und Zusatzstoffen </p>
+          <p> Tabelle der Nährwerte, Allergene und Zusatzstoffe vorverpackter Gerichte und Getränke </p>
+          <p>  Fragen zu Zutaten, Allergenen und Zusatzstoffen beantworten wir gerne unter 0800 1015 359 </p>
+          <p> Stoffe oder Erzeugnisse, die Allergien und Unverträglichkeiten auslösen können: </p>
+          <p>  A - enthält glutenhaltiges Getreide sowie daraus       hergestellte Erzeug­nisse </p>
+          <p>A1 - enthält Weizen (wie Dinkel und Khorasan-Weizen) </p>
+          <p>A2 - enthält Roggen </p>
+          <p>A3 - enthält Gerste </p>
+          <p>A4 - enthält Hafer </p>
+          <p> B - enthält Krebstiere und daraus gewonnene Erzeugnisse </p>
+          <p>  C - enthält Eier und daraus gewonnene Erzeugnisse </p>
+          <p> D - enthält Fische und daraus gewonnene Erzeugnisse </p>
+          <p> E - enthält Erdnüsse und daraus gewonnene Erzeugnisse </p>
+          <p> F - enthält Sojabohnen und daraus gewonnene Erzeugnisse </p>
+          <p> G - enthält Milch und daraus gewonnene Erzeugnisse (einschließlich Laktose) </p>
+          <p> H - enthält Schalenfrüchte sowie daraus gewonnene Erzeug­nisse </p>
+          <p>H1 - enthält Mandeln </p>
+          <p>H2 - enthält Haselnüsse </p>
+          <p> H3 - enthält Walnüsse </p>
+          <p> H4 - enthält Kaschunüsse </p>
+          <p> H5 - enthält Pecannüsse </p>
+          <p> H6 - enthält Paranüsse </p>
+          <p> H7 - enthält Pistazien </p>
+          <p> H8 - enthält Macadamianüsse </p>
+          <p> I - enthält Sellerie und daraus gewonnene Erzeugnisse </p>
+          <p> J - enthält Senf und daraus gewonnene Erzeugnisse </p>
+          <p> K - enthält Sesamsamen und daraus gewonnene Erzeugnisse </p>
+          <p> L - enthält Schwefeldioxid und Sulphite </p>
+          <p> M - enthält Lupinen und daraus gewonnene Erzeugnisse </p>
+          <p> N - enthält Weichtiere und daraus gewonnene Erzeugnisse </p>
+          </div>
+        </ion-list>
+    </div>
+          <!-- <ion-icon name="ios-mail"></ion-icon> -->
+    </div>
+
+
+    <!-- footer -->
+    <!-- footer closed -->
+<div class="footer" ion-fixed (click)="kasse=!kasse" *ngIf="!kasse&&!showoverlay">
+  <ion-icon name="ios-arrow-up" (click)="kasse=!kasse"></ion-icon> 
+  <p class="footerb">Mindestbestellwert : 10$</p>
+</div> 
+
+    <!-- footer opened -->
+<div class="footercard" ion-fixed *ngIf="kasse">
+  <ion-icon name="ios-arrow-down" (click)="kasse=!kasse"></ion-icon> 
+  <p class="footercardb"> <span class="kassetitle">kasse</span> 
+  
+
+  <ion-list class="order ilist" padding>
+      <h3>1X Cheeseburger</h3>
+      <h3 class="cost">8.90 $</h3>
+      <button class="add" icon-only small> <ion-icon name="ios-add-circle-outline"></ion-icon> </button>
+      <button class="remove" icon-only small> <ion-icon name="ios-remove-circle-outline"></ion-icon> </button>
+      <h6> + Sasam burn </h6>
+    </ion-list>
+    <ion-list class="order ilist2" padding>
+      <h3>1X Cheeseburger</h3>
+      <h3 class="cost">8.90 $</h3>
+      <button class="add" icon-only small> <ion-icon name="ios-add-circle-outline"></ion-icon> </button>
+      <button class="remove" icon-only small> <ion-icon name="ios-remove-circle-outline"></ion-icon> </button>
+      <h6> + Tagliatelle </h6>
+      <h6> + Mozzeralla </h6>
+      <h6> + Goudakass </h6>
+    </ion-list>
+
+    <ion-list class="order orderonly" padding>
+      <h3>Zwichensumme</h3>
+      <h3 class="cost">21.60 $</h3>
+    </ion-list>
+
+    <ion-list class="order orderonly" padding>
+      <h3>Liferburge</h3>
+      <h3 class="cost">21.60 $</h3>
+    </ion-list>
+
+    <ion-list class="order orderonly" padding>
+      <h3 style="color: #FF5E99">Rabatt</h3>
+      <h3 style="color: #FF5E99" class="cost">0,00 $</h3>
+    </ion-list>
+
+    <ion-list class="order Gesa" padding>
+      <h3 >Gesamtsumme <span style="color: #8592AD">(ink.url.):</span></h3> 
+      <h3 class="cost">21.60 $</h3>
+    </ion-list>
+  </p>
+  <button ion-button block class="but">BESTELLEN</button>
+
+  </div> 
+
+
+  <!-- pop up -->
+  <div class="my-overlay" padding *ngIf="showoverlay">
+    <div full class="ioverlay" >
+
+      <div class="headpop">
+          <h1>Gerich Bearbeiten</h1>      
+          <ion-icon name="ios-close" class="miniclose" (click)="showoverlay=!showoverlay"></ion-icon>
+      </div>
+
+      <h2>Cheeseburger</h2>
+      <p> when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> 
+
+      <h4>Grobe</h4>
+      <ion-list radio-group [(ngModel)]="some">
+        <ion-item>
+            <ion-label class="labpop">Gesantsume</ion-label>
+            <ion-label class="labpop2">0.00$</ion-label>
+          <ion-radio   value="some1" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label class="labpop">Gesantsume</ion-label>
+          <ion-label class="labpop2">0.00$</ion-label>
+          <ion-radio value="some2"></ion-radio>
+        </ion-item>
+      </ion-list>
+        
+      <h4>Extra zotaten nach wahel</h4>
+      <ion-list radio-group [(ngModel)]="choose">
+          <ion-item>
+              <ion-label class="labpop">Ananas</ion-label>
+              <ion-label class="labpop2">1.00$</ion-label>
+            <ion-radio   value="choose1" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="labpop">Bacon</ion-label>
+            <ion-label class="labpop2">1.00$</ion-label>
+            <ion-radio value="choose2"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label class="labpop">BBQ-Sauce</ion-label>
+              <ion-label class="labpop2">2.00$</ion-label>
+            <ion-radio   value="choose3" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="labpop">Bolognese</ion-label>
+            <ion-label class="labpop2">1.00$</ion-label>
+            <ion-radio value="choose4"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label class="labpop">Broccoli</ion-label>
+              <ion-label class="labpop2">4.00$</ion-label>
+            <ion-radio   value="choose5" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="labpop">Ei</ion-label>
+            <ion-label class="labpop2">1.00$</ion-label>
+            <ion-radio value="choose6"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label class="labpop">Irishbeef</ion-label>
+              <ion-label class="labpop2">1.00$</ion-label>
+            <ion-radio   value="choose7" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="labpop">Kapern</ion-label>
+            <ion-label class="labpop2">1.00$</ion-label>
+            <ion-radio value="choose8"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label class="labpop">Kirchtomaten</ion-label>
+              <ion-label class="labpop2">1.00$</ion-label>
+            <ion-radio   value="choose9" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="labpop">Mais</ion-label>
+            <ion-label class="labpop2">1.00$</ion-label>
+            <ion-radio value="choose10"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label class="labpop">Mozzarella</ion-label>
+              <ion-label class="labpop2">1.00$</ion-label>
+            <ion-radio   value="choose11" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="labpop">Oliven</ion-label>
+            <ion-label class="labpop2">1.00$</ion-label>
+            <ion-radio value="choose12"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+        <button class="overleCheckButton"(click)="goToCheckoutPage()" icon-only large> <span>9.99 $</span> <div class="line"></div> <ion-icon name="ios-checkmark"></ion-icon> </button>
+        <button class="overleCloseButton" (click)="showoverlay=!showoverlay" icon-only large> <ion-icon name="ios-close"></ion-icon> </button>
+    </div>
+  </div>
+    
+  <!-- end pop up -->
+
+</ion-content>

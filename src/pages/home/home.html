@@ -1,18 +1,246 @@
+<!-- هده من عندك انا كنت افضل السايد بار تكون صفحة لوحدها ولكن ما في اي مشكلة تكون بنفس الصفحات -->
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+      <button ion-button menuToggle left>
+          <img src="assets/imgs/manu.png" width="26"/>
+        </button>
+    <ion-title >
+     Home  <ion-icon name="ios-arrow-forward"></ion-icon>
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+</ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content>
+  <ion-slides [slidesPerView]="3">
+    <ion-slide>
+      <img src="assets/imgs/food/pizza.png" alt="">
+      <div class="cont">
+        <h4>Pizza</h4>
+        <p>mit Tomatensauce und Goudakäse</p>
+      </div>
+    </ion-slide>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <ion-slide>
+      <img src="assets/imgs/food/salate.png" alt="">
+      <div class="cont">
+        <h4>Salate</h4>
+        <p>mit Dressing nach Wahl</p>
+      </div>
+    </ion-slide>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-slide>
+      <img src="assets/imgs/food/pasta.png" alt="">
+      <div class="cont">
+        <h4>Pasta</h4>
+        <p>mit Nudelsorte nach Wahl</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/imgs/food/place.png" alt="">
+      <div class="cont">
+        <h4>Palace</h4>
+        <p>2mi, 4 stars</p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  
+  <div padding>
+    
+  <div class="card-background-page" >
+    
+      <div class="segmentt" >
+          <ion-segment [(ngModel)]="pet">
+            <ion-segment-button value="food">
+              Food
+            </ion-segment-button>
+            <ion-segment-button value="info">
+              Info
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+        
+        <div [ngSwitch]="pet">
+          <ion-list *ngSwitchCase="'food'">
+
+              <div>
+                  <div class="accordion">
+                      <ion-card>
+                          <ion-icon name="ios-arrow-down" class="downicon" ></ion-icon>
+        
+                          <img src="assets/imgs/food/pizza-cont.png"/>
+        
+                          <div class="card-title">Pizza</div>
+                          <div class="card-subtitle">3 Listings</div>
+                      </ion-card>
+                    </div>
+                    <div class="panel">
+                        <!-- Menu Item -->
+                        <ion-list class="list-food" no-lines>
+                            <ion-item item-start>
+                                <h2>Beef Burger</h2>
+                                <p>Beef, cheese, potato, onion, fries</p>
+        
+                                <h1 item-end> 9.00$</h1>
+                                <button item-end style="background-color: initial;">
+                                                        
+                                    <ion-icon name="md-add-circle" class="addicon"></ion-icon>
+                                </button>
+                                
+                            </ion-item>                   
+                          </ion-list>
+                    </div>
+              </div>
+              <div>
+                  <div class="accordion">
+                      <ion-card>
+                          <ion-icon name="ios-arrow-down" class="downicon"></ion-icon>
+        
+                          <img src="assets/imgs/food/salate-cont.png"/>
+        
+                          <div class="card-title">Salate</div>
+                          <div class="card-subtitle">3 Listings</div>
+                      </ion-card>
+                    </div>
+                    <div class="panel">
+                        <!-- Menu Item -->
+                        <ion-list class="list-food" no-lines>
+                            <ion-item item-start>
+                                <h2>Beef Burger</h2>
+                                <p>Beef, cheese, potato, onion, fries</p>
+        
+                                <h1 item-end> 9.00$</h1>
+                                <button item-end style="background-color: initial;">
+                                                        
+                                    <ion-icon name="md-add-circle" class="addicon"></ion-icon>
+                                </button>
+                                
+                            </ion-item>                   
+                          </ion-list>
+                    </div>
+              </div>
+        
+          </ion-list>
+        
+          <ion-list *ngSwitchCase="'info'">
+
+              <div class="info-pers">
+                  <div class="img-info">
+                    <img src="assets/imgs/all/imag-info.png" alt="">
+                  </div>
+                  <div class="content-info">
+                    <h4>PIZZA LORD</h4>
+                    <p>Inhaber: Mr. Nasir Rasho Hasso</p>
+                  </div>
+                </div>
+
+              <ion-grid>
+                <ion-row class="info-info">
+                  <ion-col col-6>
+                    <div class="email">
+                        <ion-icon name="ios-mail"></ion-icon>
+                    </div>
+                    <label>015781184458</label>
+                  </ion-col>
+
+                  <ion-col col-6>
+                      <div class="email">
+                          <ion-icon name="ios-mail"></ion-icon>
+                      </div>
+                      <label>info@frasjaf.net</label>
+                    </ion-col>
+                </ion-row>
+              </ion-grid>
+
+              <ion-card>
+                  <img src="assets/imgs/food/salate-cont.png"/>
+
+                  <div class="card-title">Neumarkt 14</div>
+                  <div class="card-subtitle">41460 Neuss</div>
+              </ion-card>
+
+              <div class="otime">
+                <h4>Öffnungszeiten</h4>
+                <h5>Montag : 6:35 AM - 8:22 AM</h5>
+                <h5>Montag : 6:35 AM - 8:22 AM</h5>
+                <h5>Montag : 6:35 AM - 8:22 AM</h5>
+                <h5>Montag : 6:35 AM - 8:22 AM</h5>
+                <h5>Montag : 6:35 AM - 8:22 AM</h5>
+                <h5>Montag : 6:35 AM - 8:22 AM</h5>
+                <h5>Montag : 6:35 AM - 8:22 AM</h5>
+
+
+                <p>
+                  <br>
+                    Infos zu Inhaltsstoffen, Allergenen und Zusatzstoffen
+                    <br>
+                    Tabelle der Nährwerte, Allergene und Zusatzstoffe vorverpackter Gerichte und Getränke
+                    <br>
+                    Fragen zu Zutaten, Allergenen und Zusatzstoffen beantworten wir gerne unter 0800 1015 359
+                    <br>
+                    Stoffe oder Erzeugnisse, die Allergien und Unverträglichkeiten auslösen können:
+                    <br>
+                    A - enthält glutenhaltiges Getreide sowie daraus       hergestellte Erzeug­nisse
+                    <br> A1 - enthält Weizen (wie Dinkel und Khorasan-Weizen)
+                    <br> A2 - enthält Roggen
+                    <br> A3 - enthält Gerste
+                    <br> A4 - enthält Hafer
+                    <br>  B - enthält Krebstiere und daraus gewonnene Erzeugnisse
+                    <br>   C - enthält Eier und daraus gewonnene Erzeugnisse
+                    <br>  D - enthält Fische und daraus gewonnene Erzeugnisse
+                    <br>  E - enthält Erdnüsse und daraus gewonnene Erzeugnisse
+                    <br>  F - enthält Sojabohnen und daraus gewonnene Erzeugnisse
+                    <br>  G - enthält Milch und daraus gewonnene Erzeugnisse (einschließlich Laktose)
+                    <br>  H - enthält Schalenfrüchte sowie daraus gewonnene Erzeug­nisse
+                    <br> H1 - enthält Mandeln
+                    <br>  H2 - enthält Haselnüsse
+                    <br>  H3 - enthält Walnüsse
+                    <br>  H4 - enthält Kaschunüsse
+                    <br>  H5 - enthält Pecannüsse
+                    <br>  H6 - enthält Paranüsse
+                    <br>  H7 - enthält Pistazien
+                    <br>  H8 - enthält Macadamianüsse
+                    <br>  I - enthält Sellerie und daraus gewonnene Erzeugnisse
+                    <br>  J - enthält Senf und daraus gewonnene Erzeugnisse
+                    <br>  K - enthält Sesamsamen und daraus gewonnene Erzeugnisse
+                    <br>  L - enthält Schwefeldioxid und Sulphite
+                    <br>  M - enthält Lupinen und daraus gewonnene Erzeugnisse
+                    <br>  N - enthält Weichtiere und daraus gewonnene Erzeugnisse
+                </p>
+              </div>
+
+
+
+
+
+          </ion-list>
+        </div>
+
+
+
+
+        <!-- <ion-icon name="ios-mail"></ion-icon> -->
+
+  </div>
+
+</div>
+
 </ion-content>
+<!-- 
+<div class="footer">
+
+    <p class="footerb">Mindestbestellwert : 10$</p>
+</div> 
+<div class="footercard">
+
+    <p class="footercardb">kasse</p>
+</div>  -->
+
+
+

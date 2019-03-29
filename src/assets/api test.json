@@ -1,0 +1,234 @@
+{
+    "group": [{
+        "id": 2,
+        "name": "Beliebte Gerichte",
+        "details": "Alle Gerichte werden mit einem Beliebte nach Wahl zubereitet.",
+        "adder": "3",
+        "imglink": "6660591538221015.jpg",
+        "created_at": "2018-09-29 11:36:55",
+        "updated_at": "2018-09-29 11:36:55"
+    }, {
+        "id": 3,
+        "name": "Salate",
+        "details": "Alle Salate werden mit einem Dressing nach Wahl zubereitet.",
+        "adder": "3",
+        "imglink": "9230191538229400.jpg",
+        "created_at": "2018-09-29 13:56:40",
+        "updated_at": "2018-09-29 13:56:40"
+    }],
+    "s": "41460",
+    "user": {
+        "username": "lord neuss",
+        "restaurant Name": "Lord Restaurant",
+        "address": "41,0000.50,0000", // هذا الكورد تبع العنوان 
+        "address": "Neumarkt 12, 41460 Neuss", // العنوان
+        "info": "lord@frasjaf.net",
+        "open": "08:30", // الحد الاقصى لساعة العمل يعني لحد هذا الوقت يعمل بعدين ما يعمل 
+        "close": "23:00", // الحد الاقصى لساعة العمل يعني لحد هذا الوقت يعمل بعدين ما يعمل 
+        "email": "lord@frasjaf.net",
+        "offDays": "satrday,sunday", // هذا الايام لا يمكن استخدام التطبيق او لما يفتح التطبيق يعطي تنبيه انو لا يعمل اليوم 
+        "minOrder": "10$", // هذا اذا كان الطلب اقل من 10 لا يمكن القبول
+        "deliveryPrice": "0", // هذا سعر الدلفري لازم يتحسب بالكارد
+        "userplace": ",41460,41461,41463,41450,",
+        "userid": 3
+    },
+    "foodswithoptions": [{
+        "id": 3,
+        "name": "Pizza Margherita",
+        "price": "4",
+        "info": "mit Tomatensauce und Gouda",
+        "branch": "3",
+        "details": "Wahl aus: Klein, Ø 28cm oder Groß, Ø 38cm.",
+        "group": "Beliebte Gerichte",
+        "groupID": "2",
+        "adder": "3",
+        "date": "2018-09-29 11:42:56",
+        "withprice": [{
+            "id": 7,
+            "name": "Klein, Ø 28cm",
+            "price": "4",
+            "type": "withprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }, {
+            "id": 8,
+            "name": "mit Ananas",
+            "price": "1",
+            "type": "withprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }, {
+            "id": 9,
+            "name": "mit Bacon",
+            "price": "1",
+            "type": "withprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }, {
+            "id": 10,
+            "name": "mit Bolognese vom Rindfleisch",
+            "price": "1",
+            "type": "withprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }, {
+            "id": 11,
+            "name": "mit Champignons frisch",
+            "price": "1",
+            "type": "withprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }, {
+            "id": 12,
+            "name": "mit Gorgonzola",
+            "price": "1",
+            "type": "withprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }, {
+            "id": 13,
+            "name": "mit Artischocken",
+            "price": "1",
+            "type": "withprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }, {
+            "id": 14,
+            "name": "mit Barbecuesauce",
+            "price": "1",
+            "type": "withprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }, {
+            "id": 15,
+            "name": "mit Broccoli",
+            "price": "1",
+            "type": "withprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }, {
+            "id": 16,
+            "name": "mit Ei",
+            "price": "1",
+            "type": "withprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }],
+        "option": [{
+            "id": 21,
+            "name": "Klein, Ø 28cm",
+            "price": "0",
+            "type": "option",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }, {
+            "id": 22,
+            "name": "Groß, Ø 38cm",
+            "price": "0",
+            "type": "option",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }],
+        "withoutprice": [{
+            "id": 19,
+            "name": "mit Zwiebeln",
+            "price": "0",
+            "type": "withoutprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }, {
+            "id": 20,
+            "name": "mit Sucuk",
+            "price": "0",
+            "type": "withoutprice",
+            "foodid": "3",
+            "created_at": "2018-09-29 11:42:59",
+            "updated_at": "2018-09-29 11:42:59"
+        }]
+    }, {
+        "id": 5,
+        "name": "kabab",
+        "price": "4,90",
+        "info": "mit Tomatensauce und Gouda",
+        "branch": "3",
+        "details": "desccccc",
+        "group": "Salate",
+        "groupID": "3",
+        "adder": "3",
+        "date": "2018-11-22 13:58:16",
+        "withprice": [{
+            "id": 29,
+            "name": "tomaten",
+            "price": "3",
+            "type": "withprice",
+            "foodid": "5",
+            "created_at": "2018-11-22 13:58:16",
+            "updated_at": "2018-11-22 13:58:16"
+        }, {
+            "id": 30,
+            "name": "felfel",
+            "price": "2",
+            "type": "withprice",
+            "foodid": "5",
+            "created_at": "2018-11-22 13:58:16",
+            "updated_at": "2018-11-22 13:58:16"
+        }, {
+            "id": 31,
+            "name": "gurke",
+            "price": "4",
+            "type": "withprice",
+            "foodid": "5",
+            "created_at": "2018-11-22 13:58:16",
+            "updated_at": "2018-11-22 13:58:16"
+        }],
+        "option": [{
+            "id": 34,
+            "name": "Groß, Ø 38cm",
+            "price": "0",
+            "type": "option",
+            "foodid": "5",
+            "created_at": "2018-11-22 13:58:16",
+            "updated_at": "2018-11-22 13:58:16"
+        }, {
+            "id": 35,
+            "name": "klein 28",
+            "price": "0",
+            "type": "option",
+            "foodid": "5",
+            "created_at": "2018-11-22 13:58:16",
+            "updated_at": "2018-11-22 13:58:16"
+        }],
+        "withoutprice": [{
+            "id": 32,
+            "name": "mit Sucuk",
+            "price": "0",
+            "type": "withoutprice",
+            "foodid": "5",
+            "created_at": "2018-11-22 13:58:16",
+            "updated_at": "2018-11-22 13:58:16"
+        }, {
+            "id": 33,
+            "name": "mit Zwiebeln, rot",
+            "price": "0",
+            "type": "withoutprice",
+            "foodid": "5",
+            "created_at": "2018-11-22 13:58:16",
+            "updated_at": "2018-11-22 13:58:16"
+        }]
+    }]
+
+
+}

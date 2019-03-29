@@ -1,0 +1,935 @@
+page-firstp {
+    
+    //header
+    // لأنني اعتمدت على التولبار في السايد بار .. فعدلتها هنا
+    ion-toolbar{
+        margin-bottom: 0px !important;
+    }
+    // الهيدير بلون ابيض
+    .toolbar-background-md{
+        background-color: white;
+    }
+    .toolbar-title{
+        font-size: 0.5rem !important;
+    }
+    .line{
+        width: 1px;
+        position: fixed;
+        top: 15px;
+        height: 30px;
+        background: #959dad;
+    }
+    ion-header{
+        height: auto;
+    }
+    ion-title{
+        ion-icon{
+            color : #959dad; 
+            margin: 0 2.5%;
+            font-size: 18px;
+        }
+        span{
+            color : #959DAD;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: "Roboto";
+        }
+    }
+    .search{
+        color: #FF5E99;
+    }
+
+
+    //content
+    .bg{
+        background-color: #2A2E43;
+        color: #8592AD;
+    }
+     // فقط لكي السلايدس في المكان المناسب
+     .scroll-content{
+        margin-top: 20px !important;
+    }
+    ion-slides {
+        height: auto;
+        margin: 4rem 0 4rem 0; 
+    }
+    ion-slide {
+        margin: 0 5px ;
+        img{
+          border-radius: 15px 15px 0px 0px;
+        }
+        .cont{
+          background-color: #353A50;
+          padding: 5px;
+          margin-top: -5px;
+          border-radius: 0px 0px 15px 15px;
+          height: 7rem;
+          h4{
+            margin-top: 1px !important;
+            font-size: 70%;
+            color:#ffffff;
+            font-weight: 400;
+          }
+          p{
+            font-size: 10px;
+            color: #ffffff;
+            margin-top: -3px;
+            font-weight: 300;
+            padding: 0 2px;
+          }
+        }
+      }
+
+      .swiper-container-android .swiper-slide, .swiper-wrapper{
+        -webkit-transform: none;
+        transform: none;
+      }
+
+    .foodop{
+        background: white !important;
+        padding: 10px 0 ;
+        text-align: start !important;
+        position: relative !important;
+        top: -30px;
+        h1{
+            float: left;
+            margin-left: 5px;
+            font-size: 18px;
+            padding: 5px;
+            color: #353a50;            
+        }   
+        h2{
+            float: right;
+            font-weight: 500;
+            color: #595e70;    
+        }
+        .foodbut{
+            float: right;
+            background: #ff5e99;
+            color: white;
+            border-radius: 100%;
+            font-size: 24px;
+            width: 33px;
+            font-weight: 100;
+            border: 3px solid #ffbcd5;
+            margin: 12px 3%;
+        }
+        p{
+            font-size: 10px;
+            padding: 0 10px;
+            color: #959DAD;    
+            display: -webkit-inline-box;
+            line-height: 10px;
+            width: 80%;
+            margin: -5px 0;
+        }
+    }
+      
+    .button-select{
+        text-align: center;
+        margin-top: 1rem;
+        .button-round-md ,.button-round-ios {
+        border-radius: 15px;
+    }
+        button {
+        display: inline-block;
+        width : 48%;
+        padding: 28px;
+        }
+
+        .dark {
+        margin-left:-12px;
+
+        }
+        .primary {
+        margin-right:-12px;
+        }
+    }
+
+    .card-background-page {
+        margin-top: 1rem;
+        ion-card {
+            position: relative;
+            text-align: center;
+            border-radius:15px;
+            overflow: visible;
+            border-radius:15px;
+            background: transparent;
+        }
+        ion-fab-list{
+            background-color: #353A50;
+            width: 100%;
+        }
+
+    img{
+        border-radius:15px;
+    }
+        .card-icons {
+        position: absolute;
+        top:0;
+        right:0;
+        width: 100%;
+        color: #fff;
+        font-size: 1.6em;
+        overflow: visible;
+        .fab {
+            position: absolute;
+            font-size: 2rem;
+            top:0;
+            right:0;
+        }
+    }    
+    .fab-md,.fab-ios {
+        color: #fff;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .card-title {
+        position: absolute;
+        top: 32%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 58%;
+        width: 100%;
+        color: #fff;
+    }
+}
+
+    .downicon{
+        position: absolute;
+        font-size: 2rem;
+        top: 15px;
+        right: 15px;
+        color: white;
+    }
+    .label-md {
+    margin: 5px;
+    }
+
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+        border-color: rgba(255, 255, 255, 0);
+        opacity: 1;
+        background-color: #ff5e99;
+    }
+
+    .segment-md .segment-button  {
+        color: #fdfdfd;
+        transition: 100ms all linear;
+        background-color: #353A50;
+        border-radius: 15px;
+    }
+
+    .segmentt{
+        background-color: #353A50;
+        border-radius: 15px;
+        margin: 0px;
+    }
+
+
+    .menu-inner .item-md, .item-ios {
+        background: transparent;
+        padding: 0 10px;
+        color: #525252;
+    }
+    .segment-ios .segment-button {
+        color: #fdfdfd;
+        -webkit-transition: 100ms all linear;
+        transition: 100ms all linear;
+        background-color: #353A50;
+        border-radius: 15px;
+    }
+
+    .segment-ios .segment-button.segment-activated{
+        border-color: rgba(255, 255, 255, 0) !important;
+        opacity: 1 !important;
+        background-color: #ff5e99 !important;
+    }
+
+    .active{
+        background: #FE80AE !important;
+    }
+
+    // info
+
+    .infobut{
+        border-top-right-radius: 10px !important;
+        border-bottom-right-radius: 10px !important  ;
+    }
+
+    .info-pers {
+    text-align: center;
+    color:#8592AD;
+    margin-top: 25px;
+
+    .img-info{
+        width: 60%;
+        margin: auto;
+    }
+    img{
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+    h4{
+        margin-top: 10px;
+    }
+    }
+    .info-info {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+
+    .email{
+        background-color: #353A50;
+        padding: 4px 3px 8px 8px;
+        color: #ffffff;
+        font-size: 1.9rem;
+        border-radius: 5px;
+        width: 33px;
+        height: 30px;
+        float: left;
+    }
+    label {
+        margin: 20px 0 0 10px;
+        position: relative;
+        top: 6px;
+        font-size: 11px;
+    }
+    .otime{
+        h4 {
+            padding: 0px 5px;
+            color: #C2C4C9;
+        }
+        h5 , p{
+        padding: 0px 5px;
+        color: rgb(167, 169, 179);
+    }}
+}
+
+.otime1{
+    margin-bottom:20%;
+}
+
+.whiite{
+    font-weight: 100;
+    color: white;
+}
+
+h2 {
+color: black;
+}
+
+
+// footer
+
+.footer {
+    border-radius: 15px 15px 0px 0px;
+    z-index: 5;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    ion-icon{
+        position: absolute;
+        bottom: 20%;
+        left: 4%;
+        font-size: 22px;
+    }
+}
+.footerb{
+    background-color: #2A2E43;
+    padding: 15px;
+    border-radius: 15px 15px 0px 0px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+// for the border
+.footerb:after {
+    background: linear-gradient(to right, #FF5E99 25%,#FE80AE 25%, #FE80AE 50%, #FEA7C7 50%, #FEA7C7 75%, #FBDAE6 75%);
+    position: absolute;
+    content: '';
+    height: 5px;
+    right: 0;
+    left: 0;
+    top: 16px;
+    border-radius: inherit;
+}
+
+.footercard {
+    border-radius: 15px 15px 0px 0px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    ion-icon{
+        position: absolute;
+        top: 10%;
+        right: 4%;
+        font-size: 22px;        
+    }
+}
+.footercardb{
+    background-color: #2A2E43;
+    padding: 13px;
+    border-radius: 15px 15px 0px 0px;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 0;
+    height: auto;
+}
+.footercardb:after {
+    background: linear-gradient(to right, #FF5E99 25%,#FE80AE 25%, #FE80AE 50%, #FEA7C7 50%, #FEA7C7 75%, #FBDAE6 75%);
+    position: absolute;
+    content: '';
+    height: 5px;
+    right: 0;
+    left: 0;
+    top: 16px;
+    border-radius: inherit;
+}
+
+.order{
+    margin: 0px !important;
+    width: 100% !important;
+    padding: 0 0 0 5% !important;
+    border-bottom: .5px solid wheat;
+    border-color: #ffffff24;
+    h3{
+        margin: 0;
+        padding: 0;
+        color: #f4f4f4;
+        font-size: 14px;
+        font-weight: 100;
+        float: left;
+    }
+}
+.orderonly{
+    padding: 5% 5% 5% 5% !important;
+    h3{
+        color: #8592AD;
+        font-weight: 500;
+    }
+}
+.kassetitle{
+    position: absolute;
+    font-size: 20px;
+    margin: 3% 5%;
+}
+.Gesa{
+    padding: 5% 5% 5% 5% !important;
+    border-bottom:none !important; 
+    h3{
+        color: white;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    span{
+        font-size: 12px;
+        color: #8592AD;
+    }
+}
+
+.cost{
+    float: right !important;
+}
+h6{
+    clear: both;
+    font-size: 10px;
+    font-weight: 100;
+    margin: -5px 0 2% 5%;
+}
+.remove{
+    margin: 0;
+    float: right;
+    background: transparent;
+    color: #FF5E99;
+    ion-icon{
+        position: static !important;
+    }
+}
+.add{
+    margin: 0;
+    float: right;
+    margin-left: -7%;
+    background: transparent;
+    color: #FF5E99;
+    ion-icon{
+        position: static !important;
+    }
+}
+
+.but{
+    background-color: #FF5E99;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+
+// overlay
+    
+.ioverlay{
+    background: white !important;
+    position: absolute;
+    padding: 5%;
+    margin: 15% 4% 15% 0%;
+    border-radius: 10px;  
+    opacity: .9;      
+    z-index: 10;
+    display: table-row;
+    left: 5%;
+    width: 90%;
+    filter: blur(0px);
+    h1{
+        color: #2A2E43;
+        font-weight: 400;
+        position: absolute;
+        top: 20%;
+        font-size: 20px;
+    }
+    h2{
+        color: #222;
+        margin: 15% 0 0 0;
+    }
+    h4{
+        color: #353A50;
+        margin: 10% 0 2% 0;
+    }
+    p{
+        color: #353a50;
+        text-align: start;
+        font-size: 12px;
+    }
+    .item-md{
+        background: transparent;
+    }
+}
+
+.ilist , .ilist2{
+    margin: 15% 0 10% 0 !important;
+}
+
+.miniclose{
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.headpop{
+    background: white;
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    padding: 5%;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+}
+
+.radio-md .radio-icon{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 5%; 
+    top: 20%;
+}
+
+.radio-md .radio-inner{
+    left: 3px;
+    top: 3px;
+    width: 15px;
+    height: 15px;
+}
+
+.labpop{
+    position: relative;
+    left: 12%;
+    top:0;
+}
+.labpop2{
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+
+.my-overlay {
+    position: absolute;
+    width: 100%;
+    display: table;
+    background: rgba(0,0,0,0.7);
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.overleCheckButton{
+    float: right;
+    background: #ff5e99;
+    border-radius: 20px;
+    color: white;
+    span{
+        font-size: 2.5rem;
+        margin: 4% 0% 10% 15px;
+        position: relative;
+        float: left;
+        top: 5px;
+    }
+    .line{
+        margin: 0 0 0 15px;
+        position: relative;
+        float: left;
+        top: 5px;
+        background: #ffffff;
+    }
+    ion-icon{
+        font-size: 4em;
+        padding: 0 15px;
+        margin: 3% 0;
+    }
+}
+
+.overleCloseButton{
+    float: right;
+    background: #8592AD;
+    color: white;
+    margin-right: 3%;
+    width: 15%;
+    height: 0;
+    padding-bottom: 15%;
+    border-radius: 50%;
+    overflow: hidden;
+    ion-icon{
+        font-size: 3em;
+        padding: 25%;
+    }
+}
+
+// عندما يكون الأوفرلاي شغال يتم عمل بلور للكونتنت و اخفاء الفوتر
+.blur{
+    filter: blur(10px);
+   }
+
+
+
+
+// tablets
+
+
+@media (min-width: 576px) {
+    .segmentt{
+        margin: 1% 0 0 0 !important;
+    }
+    ion-title{
+        ion-icon{
+            font-size: 24px !important;
+        }
+        span{
+            font-size: 24px !important;
+        }
+    }
+    .search{
+        font-size: 24px !important;
+    }
+    ion-slides{
+        width: 35% !important;
+    }
+    ion-slide{
+        width: 100% !important;
+        margin: 1rem 0 !important;
+        h4{
+            font-size: 2.3rem !important;
+        }
+        p{
+            font-size: 1.3rem !important; 
+        }
+    }
+    .card-background-page{
+        padding-left: 35%;
+        position: absolute;
+        top: 5%;
+    }
+    .swiper-wrapper{
+        display: block;
+    }
+
+    .overleCloseButton{
+        width: 9% !important;
+        padding-bottom: 9% !important;
+    }
+
+    .overleCheckButton{
+        padding: 1% 9% !important;
+    }
+    
+    .info-info{
+        label{
+            font-size: 18px !important;
+        }
+    }
+
+    .footerb{
+        font-size: 20px !important;
+    }
+
+    .order{
+        h3{
+            font-size: 20px !important;
+            margin-right: 3% !important ;
+        }
+        h6{
+            font-size: 14px !important;
+        }
+    }
+
+    .kassetitle{
+        font-size: 40px !important;
+        font-weight: 900 !important;
+    }
+
+    .but{
+        padding: 28px 0 !important;
+        span{
+            font-size: 24px !important;
+        }
+    }
+
+    .footercard{
+        // max-height: 80%;
+        ion-icon{
+            font-size: 45px !important;
+            top: 7% !important;
+        }
+    }
+    .footercardb{
+      ion-icon{
+        font-size: 35px !important;
+      }
+    }
+    
+    .add{
+        margin-left: -2% !important;
+    }
+
+    .ilist , .ilist2{
+        margin: 10% 0 0 0 !important
+    }
+    
+    .orderonly{
+        padding: 2% 5% 2% 5% !important;
+    }
+}
+
+
+@media screen and (min-width: 640px) and (min-height : 590px) and (max-height : 1000px) {
+    .segmentt{
+        margin: 5% 0 0 0 !important;
+    }
+    .ilist{
+        margin: 5% 0 0 0 !important;
+    }
+    .ilist2{
+        margin: 1% 0 0 0 !important;
+    }
+    p .kassetitle{
+        margin: 0% 5% !important;
+        font-size: 24px !important;
+    }
+    .order{
+        h3{
+            font-size: 16px !important;
+        }
+        h6{
+            font-size: 10px !important;
+            margin: -15px 0 2% 5% !important;
+        }
+    }
+    .orderonly{
+        padding: 1% 5% 2% 5% !important;
+    }
+    .footercardb{
+        ion-icon{
+            font-size: 20px !important;
+        }
+    } 
+    .but{
+        padding: 18px 0 !important;
+        span{
+            font-size: 20px !important;
+        }
+    }
+    .Gesa{
+        padding: 2% 0% 2% 5% !important;
+    }
+    
+}
+// @media (min-height: 56px) {
+
+// }
+
+
+@media (min-width: 1000px) {
+    .card-background-page{
+        width: 95%;
+    }
+    .overleCloseButton {
+        width: 65px !important;
+        height: 65px !important;
+        padding-bottom: 0 !important;
+        ion-icon{
+            font-size: 5rem !important;
+        }
+    }
+}
+
+@media (min-width: 1450px) {
+    
+    .orderonly {
+        padding: 0% 5% 2% 5% !important;
+    }
+    .Gesa{
+        padding: 0% 5% 2% 5% !important;
+    }
+}
+
+@media screen and (min-width: 500px) and (min-height : 650px) and (max-height : 1000px) {
+    .ilist{
+        margin: 6% 0 0 0 !important;
+    }
+    .ilist2{
+        margin: 3% 0 0 0 !important;
+    }
+    p .kassetitle{
+        margin: 0% 5% !important;
+        font-size: 22px !important;
+    }
+    .order{
+        h3{
+            font-size: 14px !important;
+        }
+        h6{
+            font-size: 9px !important;
+            margin: -10px 0 2% 5% !important;
+        }
+    }
+    .Gesa{
+        padding: 2% 5% 3% 5% !important;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width: 880px) and (min-height : 650px) and (max-height : 1000px) {
+    .segmentt{
+        margin: 5% 0 0 0 !important;
+    }
+    .ilist{
+        margin: 4% 0 0 0 !important;
+    }
+    .ilist2{
+        margin: 1% 0 0 0 !important;
+    }
+    p .kassetitle{
+        margin: 0% 5% !important;
+        font-size: 28px !important;
+    }
+    .order{
+        h3{
+            font-size: 16px !important;
+        }
+        h6{
+            font-size: 10px !important;
+            margin: -20px 0 2% 5% !important;
+        }
+    }
+    .orderonly{
+        padding: 1% 5% 2% 5% !important;
+    }
+    .footercardb{
+        ion-icon{
+            font-size: 20px !important;
+        }
+    } 
+    .but{
+        padding: 22px 0 !important;
+        span{
+            font-size: 20px !important;
+        }
+    }
+    .Gesa{
+        padding: 2% 0% 2% 5% !important;
+    }
+}
+
+
+
+
+@media screen and (min-width: 2000px) {
+    .segmentt{
+        margin: 4% 0 0 0 !important;
+    }
+    .ilist{
+        margin: 3% 0 0 0 !important;
+    }
+    .ilist2{
+        margin: 0% 0 0 0 !important;
+    }
+    p .kassetitle{
+        margin: 0% 5% !important;
+        font-size: 24px !important;
+    }
+    .order{
+        h3{
+            font-size: 26px !important;
+        }
+        h6{
+            font-size: 18px !important;
+            margin: 5px 0 2% 0% !important;
+        }
+    }
+    .orderonly{
+        padding: 1% 5% 2% 5% !important;
+    }
+    .footercardb{
+        ion-icon{
+            font-size: 20px !important;
+        }
+    } 
+    .but{
+        padding: 28px 0 !important;
+        span{
+            font-size: 26px !important;
+        }
+    }
+    .Gesa{
+        padding: 2% 0% 2% 5% !important;
+    }   
+}
+
+}
+
+
+
+
+
